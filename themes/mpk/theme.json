@@ -7,6 +7,21 @@
             "defaultPalette": false,
             "palette": [
                 {
+                    "color": "#000000",
+                    "name": "Black",
+                    "slug": "black"
+                },
+                {
+                    "color": "#ffffff",
+                    "name": "Ice",
+                    "slug": "ice"
+                },
+                {
+                    "color": "#707070",
+                    "name": "Ice Grey",
+                    "slug": "icegrey"
+                },
+                {
                     "color": "#3e4246",
                     "name": "Midnight",
                     "slug": "midnight"
@@ -27,24 +42,9 @@
                     "slug": "eveningsun"
                 },
                 {
-                    "color": "#ffffff",
-                    "name": "Ice",
-                    "slug": "ice"
-                },
-                {
-                    "color": "#707070",
-                    "name": "Ice Grey",
-                    "slug": "icegrey"
-                },
-                {
                     "color": "#2b5440",
                     "name": "Mountain Green",
                     "slug": "mountaingreen"
-                },
-                {
-                    "color": "#000000",
-                    "name": "Black",
-                    "slug": "black"
                 }
             ]
         }
