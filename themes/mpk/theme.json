@@ -47,6 +47,51 @@
                     "slug": "mountaingreen"
                 }
             ]
+        },
+        "layout": {
+            "contentSize": "1364px",
+            "wideSize": "1640px"
+        },
+        "typography": {
+            "fontFamilies": [
+                {
+                    "fontFamily": "Roboto', sans-serif",
+                    "name": "Roboto",
+                    "slug": "roboto"
+                },
+                {
+                    "fontFamily": "Oswald, sans-serif",
+                    "name": "Oswald",
+                    "slug": "oswald"
+                }
+            ],
+            "fontSizes": [
+                {
+                    "name": "Content",
+                    "size": "20px",
+                    "slug": "content"
+                },
+                {
+                    "name": "Content Small",
+                    "size": "16px",
+                    "slug": "contentsmall"
+                },
+                {
+                    "name": "Header One",
+                    "size": "60px",
+                    "slug": "headerone"
+                },
+                {
+                    "name": "Header Two",
+                    "size": "40px",
+                    "slug": "headertwo"
+                },
+                {
+                    "name": "Header Three",
+                    "size": "30px",
+                    "slug": "headerthree"
+                }
+            ]
         }
     }
 }

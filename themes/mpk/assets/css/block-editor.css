@@ -5,3 +5,24 @@
 .wp-block-quote.is-style-fancy-quote {
     color: #e18130;
 }
+
+.entry-content > *{
+    width: 1364px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alignwide {
+    width: 1640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alignfull {
+    width: 100%;
+}
+
+body {
+    --wp--preset--font-family--roboto: Roboto,sans-serif;
+    --wp--preset--font-family--oswald: Oswald, sans-serif;
+}
