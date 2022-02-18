@@ -1,0 +1,7 @@
+.wp-block-quote {
+    color: #707070;
+}
+
+.wp-block-quote.is-style-fancy-quote {
+    color: #e18130;
+}
