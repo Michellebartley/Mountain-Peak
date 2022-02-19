@@ -2,10 +2,35 @@
     color: #707070;
 }
 
-.wp-block-quote.is-style-fancy-quote {
+.wp-block-quote.is-style-mpk-quote {
     color: #e18130;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family:  Oswald, sans-serif;
 }
+
+p, .wp-block-quote__citation, .entry-meta, .entry-footer, .main-navigation {
+    font-family: Roboto, sans-serif;
+}
+
+a {
+    color: #2b5440;
+}
+
+.wp-block-preformatted {
+    font-family: Roboto, sans-serif;
+}
+
+thead, caption {
+    font-family:  Oswald, sans-serif;
+}
+
+tbody, figcaption, .wp-block-archives, .wp-block-categories,.wp-block-latest-comments, .wp-block-latest-posts, .wp-block-pages-list__item, .wp-block-search__label, .wp-block-search__inside-wrapper{
+    font-family: Roboto, sans-serif;
+}
+
+.wp-block-archives, .wp-block-categories__list, .wp-block-pages-list__item, .page_item {
+    list-style: none;
+}
+
