@@ -6,7 +6,6 @@
     color: #e18130;
 }
 
-<<<<<<< HEAD
 h1, h2, h3, h4, h5, h6 {
     font-family:  Oswald, sans-serif;
 }
@@ -35,7 +34,6 @@ tbody, figcaption, .wp-block-archives, .wp-block-categories,.wp-block-latest-com
     list-style: none;
 }
 
-=======
 .entry-content > *{
     width: 1364px;
     margin-left: auto;
@@ -56,4 +54,3 @@ body {
     --wp--preset--font-family--roboto: Roboto,sans-serif;
     --wp--preset--font-family--oswald: Oswald, sans-serif;
 }
->>>>>>> GlobalStyles
