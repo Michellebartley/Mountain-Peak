@@ -55,7 +55,11 @@
         "typography": {
             "fontFamilies": [
                 {
+<<<<<<< HEAD
                     "fontFamily": "Roboto, sans-serif",
+=======
+                    "fontFamily": "Roboto', sans-serif",
+>>>>>>> GlobalStyles
                     "name": "Roboto",
                     "slug": "roboto"
                 },
@@ -93,6 +97,9 @@
                 }
             ]
         }
+<<<<<<< HEAD
         
+=======
+>>>>>>> GlobalStyles
     }
 }
