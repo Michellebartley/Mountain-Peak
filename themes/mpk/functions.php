@@ -128,7 +128,7 @@ add_action( 'widgets_init', 'mpk_widgets_init' );
  * Enqueue scripts and styles.
  */
 function mpk_scripts() {
-	wp_enqueue_style( "app", get_template_directory_uri( ).'/assets/css/app.scss');
+	wp_enqueue_style( "mpk-app", get_template_directory_uri( ).'/assets/css/app.css');
 	wp_enqueue_style( 'mpk-style', get_stylesheet_uri(), array(), MPK_VERSION );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
