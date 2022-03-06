@@ -129,7 +129,7 @@ add_action( 'widgets_init', 'mpk_widgets_init' );
  */
 function mpk_scripts() {
 	wp_enqueue_style( "mpk-app", get_template_directory_uri( ).'/assets/css/app.css');
-	wp_enqueue_style( "bootstrap-icons", 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.csss');
+	wp_enqueue_style( "bootstrap-icons", 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css');
 	wp_enqueue_style( 'mpk-style', get_stylesheet_uri(), array(), MPK_VERSION );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
