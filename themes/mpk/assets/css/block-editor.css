@@ -16,6 +16,11 @@ p, .wp-block-quote__citation, .entry-meta, .entry-footer, .main-navigation {
 
 a {
     color: #2b5440;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
 }
 
 .wp-block-preformatted {
