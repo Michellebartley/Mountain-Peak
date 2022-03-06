@@ -1,0 +1,14 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+@import "./vendor/scss/bootstrap";
+
+// Add custome code after this
+
+.entry-title {
+    display: none;
+    }
+
+    body{
+        background-color: hsl(0, 0%, 100%);
+    }

@@ -1,36 +1,62 @@
 .wp-block-quote {
-    color: #707070;
+    color: #707070!important;
 }
 
 .wp-block-quote.is-style-mpk-quote {
-    color: #e18130;
+    color: #e18130!important;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family:  Oswald, sans-serif;
+    font-family:  Oswald, sans-serif!important;
 }
 
 p, .wp-block-quote__citation, .entry-meta, .entry-footer, .main-navigation {
-    font-family: Roboto, sans-serif;
+    font-family: Roboto, sans-serif !important;
 }
 
 a {
-    color: #2b5440;
+    color: #2b5440 !important;
+    text-decoration: none !important;
+}
+
+ul {
+    list-style: none !important;
 }
 
 .wp-block-preformatted {
-    font-family: Roboto, sans-serif;
+    font-family: Roboto, sans-serif !important;
 }
 
 thead, caption {
-    font-family:  Oswald, sans-serif;
+    font-family:  Oswald, sans-serif !important;
 }
 
 tbody, figcaption, .wp-block-archives, .wp-block-categories,.wp-block-latest-comments, .wp-block-latest-posts, .wp-block-pages-list__item, .wp-block-search__label, .wp-block-search__inside-wrapper{
-    font-family: Roboto, sans-serif;
+    font-family: Roboto, sans-serif !important;
 }
 
 .wp-block-archives, .wp-block-categories__list, .wp-block-pages-list__item, .page_item {
-    list-style: none;
+    list-style: none !important;
 }
 
+.entry-content > *{
+    width: 1364px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.alignwide {
+    width: 1640px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.alignfull {
+    width: 100% !important;
+}
+
+body {
+    background-color: #ffffff  !important;
+    --wp--preset--font-family--roboto: Roboto,sans-serif !important;
+    --wp--preset--font-family--oswald: Oswald, sans-serif !important;
+}

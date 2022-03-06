@@ -87,6 +87,8 @@ function mpk_setup() {
 			'flex-height' => true,
 		)
 	);
+		
+	add_theme_support( 'wp-block-styles' );
 }
 add_action( 'after_setup_theme', 'mpk_setup' );
 
@@ -126,6 +128,8 @@ add_action( 'widgets_init', 'mpk_widgets_init' );
  * Enqueue scripts and styles.
  */
 function mpk_scripts() {
+	wp_enqueue_style( "mpk-app", get_template_directory_uri( ).'/assets/css/app.css');
+	wp_enqueue_style( "bootstrap-icons", 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css');
 	wp_enqueue_style( 'mpk-style', get_stylesheet_uri(), array(), MPK_VERSION );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -133,6 +137,23 @@ function mpk_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'mpk_scripts' );
+
+/**
+ * Show cart contents / total Ajax
+ */
+add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
+
+function woocommerce_header_add_to_cart_fragment( $fragments ) {
+	global $woocommerce;
+
+	ob_start();
+
+	?>
+	<a class="cart-customlocation" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>"><?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?> – <?php echo $woocommerce->cart->get_cart_total(); ?></a>
+	<?php
+	$fragments['a.cart-customlocation'] = ob_get_clean();
+	return $fragments;
+}
 
 /**
  * Custom template tags for this theme.
