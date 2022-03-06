@@ -26,44 +26,42 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'mpk' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="container">
-			
+
+	<div class="container pt-2 pb-2">
+
+		<div class="row">
+
+			<div class="col-md-4">
+				<nav id="site-navigation" class="main-navigation">
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'menu-primary',
+							'menu_id'        => 'primary-menu',
+						)
+					);
+					?>
+				</nav><!-- #site-navigation -->
+			</div>
+
+			<div class="col-md-8">
+				<div class="col-md-5">
+					<?php aws_get_search_form( true ); ?>
+				</div>
+				<div class="col cart">
+					<i class="bi bi-bag"></i>
+					<a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf ( _n( '%d item', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></a>
+				</div>
+				<div class="col account">
+					<i class="bi bi-person-circle"></i>
+				</div>
+			</div>
 		</div>
-	
 
-
-
-
-
-
-
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$mpk_description = get_bloginfo( 'description', 'display' );
-			if ( $mpk_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $mpk_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-primary',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
+		<div class="row">
+			<div class="col site-header__logo">
+				<?php the_custom_logo();?>
+			</div>
+		</div>
+	</div>
 	</header><!-- #masthead -->
