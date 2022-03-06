@@ -26,6 +26,17 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'mpk' ); ?></a>
 
 	<header id="masthead" class="site-header">
+		<div class="container">
+			
+		</div>
+	
+
+
+
+
+
+
+
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
