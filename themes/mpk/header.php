@@ -29,9 +29,9 @@
 
 	<div class="container pt-2 pb-2">
 
-		<div class="row align-items-left">
+		<div class="row">
 
-			<div class="col-md-4">
+			<div class="col-md-4 leftCol justify-content-center align-items-center">
 				<nav id="site-navigation" class="main-navigation">
 					<?php
 					wp_nav_menu(
@@ -43,19 +43,20 @@
 					?>
 				</nav><!-- #site-navigation -->
 			</div>
+			<div class="col-md 5 spacer"></div>
 
-			<div class="col-md-8  align-items-right">
+			<div class="col-md-3 rightCol justify-content-center align-items-center">
 
-				<div class="col-md-5 d-inline-flex justify-content-end align-items-center">
+				<div class="col-md-5 d-inline-flex justify-content-end align-items-right">
 					<?php aws_get_search_form( true ); ?>
 				</div>
 
-				<div class="col cart d-inline-flex justify-content-end align-items-center">
+				<div class="col cart d-inline-flex justify-content-end align-items-right">
 					<a href="<?php echo wc_get_cart_url(); ?>"<i class="bi bi-bag"></i></a>
 					<a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf ( _n( '%d item', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></a>
 				</div>
 
-				<div class="col account d-inline-flex justify-content-end align-items-center">
+				<div class="col account d-inline-flex justify-content-end align-items-right">
 					<i class="bi bi-person-circle"></i>
 				</div>
 			</div>
