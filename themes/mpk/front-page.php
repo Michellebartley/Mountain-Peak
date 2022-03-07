@@ -12,11 +12,10 @@
  * @package Mountain_Peak
  */
 
-get_header();
+if(is_page(23)) { get_header('ourstory'); } else { get_header(); } wp_head();
 ?>
 
 	<main id="primary" class="site-main">
-    <h1>Front Page</h1>
 		<?php
 		while ( have_posts() ) :
 			the_post();
