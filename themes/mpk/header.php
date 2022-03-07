@@ -46,16 +46,16 @@
 
 			<div class="col-md-8  align-items-right">
 
-				<div class="col-md-5">
+				<div class="col-md-5 d-inline-flex justify-content-end align-items-center">
 					<?php aws_get_search_form( true ); ?>
 				</div>
 
-				<div class="col cart">
+				<div class="col cart d-inline-flex justify-content-end align-items-center">
 					<a href="<?php echo wc_get_cart_url(); ?>"<i class="bi bi-bag"></i></a>
 					<a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf ( _n( '%d item', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></a>
 				</div>
 
-				<div class="col account">
+				<div class="col account d-inline-flex justify-content-end align-items-center">
 					<i class="bi bi-person-circle"></i>
 				</div>
 			</div>

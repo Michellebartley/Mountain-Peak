@@ -9,6 +9,16 @@
     display: none;
     }
 
-    body{
-        background-color: hsl(0, 0%, 100%);
-    }
+body{
+    background-color: hsl(0, 0%, 100%);
+}
+
+ul.menu {
+    padding: 0;
+}
+.menu li{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-right: 1rem;
+}

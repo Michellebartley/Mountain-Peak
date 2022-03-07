@@ -11287,4 +11287,15 @@ textarea.form-control-lg {
 
 body {
   background-color: white;
+}
+
+ul.menu {
+  padding: 0;
+}
+
+.menu li {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-right: 1rem;
 }/*# sourceMappingURL=app.css.map */
