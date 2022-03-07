@@ -75,7 +75,7 @@ if ( ! class_exists( 'AWS_Admin_Notices' ) ) :
             }
 
             if ( class_exists('ACF') && ( ! $hide_option || array_search( 'acf', $hide_option ) === false ) ) {
-                $notice_message .= '<li>' . __( 'Advanced Custom Fields ( ACF ) plugin.', 'advanced-woo-search' ) . ' <a target="_blank" href="https://advanced-woo-search.com/guide/acf-support/?utm_source=wp-plugin&utm_medium=integration_notice&utm_campaign=acf">' . __( 'Learn more', 'advanced-woo-search' ) . '</a></li>';
+                $notice_message .= '<li>' . __( 'Advanced Custom Fields ( ACF ) plugin.', 'advanced-woo-search' ) . ' <a target="_blank" href="https://advanced-woo-search.com/features/acf-plugin-support/?utm_source=wp-plugin&utm_medium=integration_notice&utm_campaign=acf">' . __( 'Learn more', 'advanced-woo-search' ) . '</a></li>';
                 $notice_id .= 'acf|';
             }
 
