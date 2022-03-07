@@ -26,13 +26,12 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'mpk' ); ?></a>
 
 	<header id="masthead" class="site-header">
-
 	<div class="container pt-2 pb-2">
 
-		<div class="row">
+		<div class="row container-xxxl">
 
-			<div class="col-md-4 leftCol justify-content-center align-items-center">
-				<nav id="site-navigation" class="main-navigation">
+			<div class="col-md-4 leftCol">
+				<nav id="site-navigation" class="main-navigation align-items-center">
 					<?php
 					wp_nav_menu(
 						array(
@@ -56,8 +55,10 @@
 					<a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf ( _n( '%d item', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></a>
 				</div>
 
-				<div class="col account d-inline-flex justify-content-end align-items-right">
+				<div class="col account d-inline-flex justify-content-end align-items-right">	
+				<a href="https://mountainpeak.local/account/">
 					<i class="bi bi-person-circle"></i>
+				</a> 
 				</div>
 			</div>
 		</div>
@@ -67,5 +68,20 @@
 				<?php the_custom_logo();?>
 			</div>
 		</div>
+				
+		<div class="row site-header__text">
+			<h1>Uncompromising… Quality Outdoor Equipment.</h1>
+			<h4>Outfitting Adventure Seekers Since 1985.</h4>
+			<button class="btn btn-md" role="button">	
+				<a href="https://mountainpeak.local/shop/">
+					SHOP NOW
+				</a> 
+			</button>
+		</div>
 	</div>
-	</header><!-- #masthead -->
+	<div class="text-center bg-image">		
+		<div class="img-container">
+			<img src="<?php header_image(); ?>">
+		</div>
+	</div>
+</header><!-- #masthead -->
