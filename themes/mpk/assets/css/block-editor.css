@@ -6,11 +6,11 @@
     color: #e18130!important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
     font-family:  Oswald, sans-serif!important;
 }
 
-p, .wp-block-quote__citation, .entry-meta, .entry-footer, .main-navigation {
+p, h4, h5, h6 .wp-block-quote__citation, .entry-meta, .entry-footer, .main-navigation {
     font-family: Roboto, sans-serif !important;
 }
 

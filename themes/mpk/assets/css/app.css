@@ -11287,4 +11287,117 @@ textarea.form-control-lg {
 
 body {
   background-color: white;
+}
+
+.img-container {
+  margin-top: -37rem;
+}
+.img-container img {
+  z-index: -100;
+}
+
+.site-header {
+  height: 100vh;
+}
+.site-header .container-xxxl {
+  width: 1500px;
+}
+.site-header ul.menu {
+  padding: 0;
+}
+.site-header .menu li {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-right: 1rem;
+}
+.site-header .leftCol {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 2.6rem;
+  color: #fff !important;
+  font-size: 24px;
+  font-weight: 600;
+  z-index: 10;
+}
+.site-header .leftCol a {
+  color: #fff !important;
+}
+.site-header .rightCol {
+  display: flex;
+  justify-content: right;
+  margin-top: 1rem;
+  z-index: 10;
+}
+.site-header .aws-search-field {
+  border-radius: 4px !important;
+  z-index: -1;
+}
+.site-header .aws-search-btn {
+  margin-left: -3px !important;
+  border-top-right-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
+  background-color: #2b5440 !important;
+}
+.site-header .aws-search-btn_icon {
+  color: #fff !important;
+}
+.site-header .aws-container .aws-search-form {
+  height: 28px;
+  width: 15rem;
+  margin-right: 16px !important;
+  z-index: 10;
+}
+.site-header .bi {
+  padding: 2px;
+  font-size: 25px;
+  color: #fff !important;
+}
+.site-header .bi-bag {
+  margin-right: -8px !important;
+}
+.site-header .cart-customlocation {
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  height: 17px;
+  width: 16px;
+  background-color: #2b5440;
+  color: #fff !important;
+  border-radius: 100%;
+}
+.site-header .site-header__logo {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 10;
+}
+.site-header .site-header__text {
+  margin-top: 5rem;
+}
+.site-header .site-header__text h1, .site-header .site-header__text .h1, .site-header .site-header__text h4, .site-header .site-header__text .h4, .site-header .site-header__text button, .site-header .site-header__text a {
+  color: #fff !important;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  margin-bottom: 30px;
+}
+.site-header .site-header__text h1, .site-header .site-header__text .h1 {
+  font-size: 60px;
+}
+.site-header .site-header__text .btn {
+  text-align: center;
+  justify-items: center;
+  width: 10rem;
+  background-color: #2b5440 !important;
+}
+.site-header .site-header__text button {
+  margin-inline: auto;
+  border-radius: 20px;
+}
+
+.site-main {
+  margin-top: 0;
 }/*# sourceMappingURL=app.css.map */

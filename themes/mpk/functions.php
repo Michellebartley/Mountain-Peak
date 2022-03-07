@@ -73,6 +73,50 @@ function mpk_setup() {
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
+	// Add theme support for Custom Header
+	add_theme_support( 'custom-header' );
+
+	function mpk_custom_header_setup() {
+		$defaults = array(
+			// Display the header text along with the image
+			'header-text'           => false,
+			// Header text color default
+			'default-text-color'        => '#fff',
+			// Header image random rotation default
+			'random-default'        => false,
+			// Enable upload of image file in admin 
+			'uploads'       => false,
+			// function to be called in theme head section
+			'wp-head-callback'      => 'wphead_cb',
+			//  function to be called in preview page head section
+			'admin-head-callback'       => 'adminhead_cb',
+			// function to produce preview markup in the admin screen
+			'admin-preview-callback'    => 'adminpreview_cb',
+			);
+	}
+	add_action( 'after_setup_theme', 'mpk_custom_header_setup' );
+
+	$header_info = array(
+		'width'         => 1920,
+		'height'        => 800,
+		'default-image' => get_template_directory_uri() . '/assets/img/home-bg.png',
+	);
+	add_theme_support( 'custom-header', $header_info );
+	
+	$header_images = array(
+		'sunset' => array(
+				'url'           => get_template_directory_uri() . '/assets/img/home-bg.png',
+				'thumbnail_url' => get_template_directory_uri() . '/assets/img/home-bg.png',
+				'description'   => 'Sunset',
+		),
+		'flower' => array(
+				'url'           => get_template_directory_uri() . '/assets/img/home-bg.png',
+				'thumbnail_url' => get_template_directory_uri() . '/assets/img/home-bg.png',
+				'description'   => 'Flower',
+		),  
+	);
+	register_default_headers( $header_images );
+
 	/**
 	 * Add support for core custom logo.
 	 *
