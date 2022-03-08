@@ -11,19 +11,19 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
+	<footer id="colophon" class="site-footer pt-5">
 
-	<div class="text-white pt5 pb5">
+	<div class="footer-row text-white pt5 pb5">
 		<div class="container">
-			<div class="row d-inline-flex">
-				<div class="col-med-4">
+			<div class="row">
+				<div class="col-4">
 					<?php dynamic_sidebar( 'footer-widget-col-one' )?>
 				</div>
-				<div class="col-med-4">
-					Company
+				<div class="col-4">
+					<?php dynamic_sidebar( 'footer-widget-col-two' )?>
 				</div>
-				<div class="col-med-4 ms-auto">
-					Keep in Touch
+				<div class="col-4 ms-auto">
+					<?php dynamic_sidebar( 'footer-widget-col-three' )?>
 				</div>
 			</div>
 		</div>
@@ -31,10 +31,10 @@
 
 	<div class="container"></div>
 
-	<div class="container pt-2 pb-2">
+	<div class="container pt-5 pb-3">
 		<div class="row d-flex align-items-center">
-			<div class="col">
-				<p>&copy; <?php bloginfo('name');?> <?php echo date('Y'); ?> All rights reserved | Created by <a href="https://michellebartley.ca">Michelle Bartley</a> </p>
+			<div class="col-12">
+				<p>&copy; <?php bloginfo('name');?> <?php echo date('Y'); ?> All rights reserved | Created by <a href="https://michellebartley.ca"><span>Michelle Bartley</span></a> </p>
 			</div>
 		</div>
 	</div>

@@ -73,6 +73,40 @@ function mpk_setup() {
 	}
 	add_action( 'widgets_init', 'custom_footer_widget_one');
 
+	/*
+	* Footer Widget 2
+	*/
+	function custom_footer_widget_two() {
+		$args = array(
+			'id' 			=>	'footer-widget-col-two',
+			'name'			=>	__('Footer Column Two', 'text_domain'),
+			'description'	=>	__('Column Two', 'text_domain'),
+			'before_title'	=>	'<h3 class="title">',
+			'after_title'	=>	'</h3>',
+			'before_widget'	=>	'<div id="%1$s" class="widget %2$s">',
+			'after_widget'	=>	'</div>'
+		);
+		register_sidebar( $args );
+	}
+	add_action( 'widgets_init', 'custom_footer_widget_two');
+
+	/*
+	* Footer Widget 3
+	*/
+	function custom_footer_widget_three() {
+		$args = array(
+			'id' 			=>	'footer-widget-col-three',
+			'name'			=>	__('Footer Column Three', 'text_domain'),
+			'description'	=>	__('Column Three', 'text_domain'),
+			'before_title'	=>	'<h3 class="title">',
+			'after_title'	=>	'</h3>',
+			'before_widget'	=>	'<div id="%1$s" class="widget %2$s">',
+			'after_widget'	=>	'</div>'
+		);
+		register_sidebar( $args );
+	}
+	add_action( 'widgets_init', 'custom_footer_widget_three');
+
 
 	/*
 	* Switch default core markup for search form, comment form, and comments

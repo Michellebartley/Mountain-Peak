@@ -11414,20 +11414,24 @@ body {
 }
 
 .site-footer {
-  display: flex;
   background-color: #3E4246;
   color: #fff;
-  justify-content: center;
-  align-items: center;
 }
 .site-footer .site-info {
   text-align: center;
 }
-.site-footer .col-md-4 {
-  text-align: left;
-  padding-left: 2rem;
-  padding-top: 1rem;
-}
-.site-footer .footer-navigation a {
+.site-footer .footer-row a {
   color: #707070 !important;
+}
+.site-footer .col-12 {
+  text-align: center;
+}
+.site-footer .col-12 span {
+  color: #E18130;
+}
+.site-footer .wp-block-social-links {
+  height: 30px;
+}
+.site-footer a.wp-block-social-link-anchor {
+  color: #E18130 !important;
 }/*# sourceMappingURL=app.css.map */
