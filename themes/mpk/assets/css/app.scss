@@ -10,6 +10,7 @@
     }
 
 body{
+    min-height: 100vh;
     background-color: hsl(0, 0%, 100%);
 }
 
@@ -128,6 +129,30 @@ body{
 
 }
 
-.site-main {
-    margin-top: 0;
+.story-header {
+    margin-top: -1rem;
+    .bi-arrow-down-circle-fill{
+        font-size: 50px;
+        color: #E18130!important;
+    }
 }
+
+.page-id-92 .story-header {
+    background-image: url(https://mountainpeak.local/wp-content/uploads/2022/03/ourStory-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.site-footer {
+    display: flex;
+    background-color: #3E4246;
+    color: #fff;
+
+    .site-info {
+        text-align: center;
+    }
+}
+
+// .site-main {
+//     margin-top: 0;
+// }
