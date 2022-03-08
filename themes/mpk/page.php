@@ -11,10 +11,16 @@
  *
  * @package Mountain_Peak
  */
+/* */ 
 
-get_header();
+if ( is_page('our-story') ) :
+    get_header('ourstory');
+elseif ( is_page('special-page') ) :
+    get_header('special');    
+else :
+    get_header();
+endif;
 ?>
-
 	<main id="primary" class="site-main">
 
 		<?php

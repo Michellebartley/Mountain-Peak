@@ -1,0 +1,158 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+@import "./vendor/scss/bootstrap";
+
+// Add custome code after this
+
+.entry-title {
+    display: none;
+    }
+
+body{
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.img-container {
+    margin-top: -37rem;
+    img {
+        z-index: -100;
+
+    }
+}
+
+.site-header {
+    height: 100vh;
+    .container-xxxl {
+        width: 1500px;
+    }
+    ul.menu {
+        padding: 0;
+    }
+    .menu li{
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-right: 1rem;
+    }
+    .leftCol {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin-top: 2.6rem;
+        color: #fff!important;
+        font-size: 24px;
+        font-weight: 600;
+        z-index: 10;
+    }
+    .leftCol a {
+        color: #fff!important;
+    }
+    .rightCol {
+        display: flex;
+        justify-content:right;
+        margin-top: 1rem;
+        z-index: 10;
+    }
+    .aws-search-field {
+        border-radius: 4px !important;
+        z-index: -1;
+    }
+    .aws-search-btn {
+        margin-left: -3px!important;
+        border-top-right-radius: 4px !important;
+        border-bottom-right-radius: 4px !important;
+        background-color: #2b5440!important;
+    }
+    .aws-search-btn_icon {
+        color: #fff!important;
+    }
+    .aws-container .aws-search-form {
+        height: 28px;
+        width: 15rem;
+        margin-right: 16px!important;
+        z-index: 10;
+    }
+
+    .bi{
+        padding: 2px;
+        font-size: 25px;
+        color: #fff!important;
+    }
+    .bi-bag{
+        margin-right: -8px!important;
+    }
+    .cart-customlocation {
+        font-size: 12px;
+        font-weight: 500;
+        text-align: center;
+        height: 17px;
+        width: 16px;
+        background-color: #2b5440;
+        color: #fff!important;
+        border-radius: 100%;
+    }
+
+    .site-header__logo {
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        z-index: 10;
+    }
+
+    .site-header__text {
+        margin-top: 5rem;
+        h1, h4, button, a {
+            color: #fff!important;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 60px;
+        }
+        .btn{
+            text-align: center;
+            justify-items: center;
+            width: 10rem;
+            // height: 5rem;
+            background-color: #2b5440!important;
+        }
+        button {
+            margin-inline: auto;
+            border-radius: 20px;
+        }
+    }
+
+}
+
+.story-header {
+    margin-top: -1rem;
+    .bi-arrow-down-circle-fill{
+        font-size: 50px;
+        color: #E18130!important;
+    }
+}
+
+.page-id-92 .story-header {
+    background-image: url(https://mountainpeak.local/wp-content/uploads/2022/03/ourStory-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.site-footer {
+    display: flex;
+    background-color: #3E4246;
+    color: #fff;
+
+    .site-info {
+        text-align: center;
+    }
+}
+
+// .site-main {
+//     margin-top: 0;
+// }

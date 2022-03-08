@@ -26,33 +26,62 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'mpk' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$mpk_description = get_bloginfo( 'description', 'display' );
-			if ( $mpk_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $mpk_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+	<div class="container pt-2 pb-2">
 
-		<nav id="site-navigation" class="main-navigation">
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+		<div class="row container-xxxl">
+
+			<div class="col-md-4 leftCol">
+				<nav id="site-navigation" class="main-navigation align-items-center">
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'menu-primary',
+							'menu_id'        => 'primary-menu',
+						)
+					);
+					?>
+				</nav><!-- #site-navigation -->
+			</div>
+			<div class="col-md 5 spacer"></div>
+
+			<div class="col-md-3 rightCol justify-content-center align-items-center">
+
+				<div class="col-md-5 d-inline-flex justify-content-end align-items-right">
+					<?php aws_get_search_form( true ); ?>
+				</div>
+
+				<div class="col cart d-inline-flex justify-content-end align-items-right">
+					<a href="<?php echo wc_get_cart_url(); ?>"<i class="bi bi-bag"></i></a>
+					<a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf ( _n( '%d item', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></a>
+				</div>
+
+				<div class="col account d-inline-flex justify-content-end align-items-right">	
+				<a href="https://mountainpeak.local/account/">
+					<i class="bi bi-person-circle"></i>
+				</a> 
+				</div>
+			</div>
+		</div>
+
+		<div class="row align-items-center">
+			<div class="col site-header__logo">
+				<?php the_custom_logo();?>
+			</div>
+		</div>
+				
+		<div class="row site-header__text">
+			<h1>Uncompromising… Quality Outdoor Equipment.</h1>
+			<h4>Outfitting Adventure Seekers Since 1985.</h4>
+			<button class="btn btn-md" role="button">	
+				<a href="https://mountainpeak.local/shop/">
+					SHOP NOW
+				</a> 
+			</button>
+		</div>
+	</div>
+	<div class="text-center bg-image">		
+		<div class="img-container">
+			<img src="<?php header_image(); ?>">
+		</div>
+	</div>
+</header><!-- #masthead -->

@@ -49,7 +49,7 @@ function mpk_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'mpk' ),
+			'menu-primary' => esc_html__( 'Primary', 'mpk' ),
 		)
 	);
 
@@ -73,6 +73,61 @@ function mpk_setup() {
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
+	// Add theme support for Custom Header
+	add_theme_support( 'custom-header' );
+
+	function mpk_custom_header_setup() {
+		$defaults = array(
+			// Display the header text along with the image
+			'header-text'           => false,
+			// Header text color default
+			'default-text-color'        => '#fff',
+			// Header image random rotation default
+			'random-default'        => false,
+			// Enable upload of image file in admin 
+			'uploads'       => false,
+			// function to be called in theme head section
+			'wp-head-callback'      => 'wphead_cb',
+			//  function to be called in preview page head section
+			'admin-head-callback'       => 'adminhead_cb',
+			// function to produce preview markup in the admin screen
+			'admin-preview-callback'    => 'adminpreview_cb',
+			);
+	}
+	add_action( 'after_setup_theme', 'mpk_custom_header_setup' );
+
+	$header_info = array(
+		'width'         => 1920,
+		'height'        => 800,
+		'default-image' => get_template_directory_uri() . '/assets/img/home-bg.png',
+	);
+	add_theme_support( 'custom-header', $header_info );
+	
+	$header_images = array(
+		'Home' => array(
+				'url'           => get_template_directory_uri() . '/assets/img/home-bg.png',
+				'thumbnail_url' => get_template_directory_uri() . '/assets/img/home-bg.png',
+				'description'   => 'Home Page',
+		),
+		'Story' => array(
+				'url'           => get_template_directory_uri() . '/assets/img/ourStory-bg.png',
+				'thumbnail_url' => get_template_directory_uri() . '/assets/img/ourStory-bg.png',
+				'description'   => 'Our Story',
+		),  
+	);
+	register_default_headers( $header_images );
+
+	// function change_header($url_for_image) {
+	// 	if (is_home()) 
+	// 		$url_for_image = "https://mountainpeak.local/wp-content/uploads/2022/03/cropped-home-bg.png";
+	
+	// 	if (is_single())
+	// 		$url_for_image = "https://mountainpeak.local/wp-content/uploads/2022/03/ourStory-bg.png";
+	
+	// 	return $url_for_image;
+	// }
+	// add_filter('mpk_mod_header_image', 'change_header');
+
 	/**
 	 * Add support for core custom logo.
 	 *
@@ -87,6 +142,8 @@ function mpk_setup() {
 			'flex-height' => true,
 		)
 	);
+		
+	add_theme_support( 'wp-block-styles' );
 }
 add_action( 'after_setup_theme', 'mpk_setup' );
 
@@ -126,6 +183,8 @@ add_action( 'widgets_init', 'mpk_widgets_init' );
  * Enqueue scripts and styles.
  */
 function mpk_scripts() {
+	wp_enqueue_style( "mpk-app", get_template_directory_uri( ).'/assets/css/app.css');
+	wp_enqueue_style( "bootstrap-icons", 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css');
 	wp_enqueue_style( 'mpk-style', get_stylesheet_uri(), array(), MPK_VERSION );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -133,6 +192,23 @@ function mpk_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'mpk_scripts' );
+
+/**
+ * Show cart contents / total Ajax
+ */
+add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
+
+function woocommerce_header_add_to_cart_fragment( $fragments ) {
+	global $woocommerce;
+
+	ob_start();
+
+	?>
+	<a class="cart-customlocation" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>"><?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?> – <?php echo $woocommerce->cart->get_cart_total(); ?></a>
+	<?php
+	$fragments['a.cart-customlocation'] = ob_get_clean();
+	return $fragments;
+}
 
 /**
  * Custom template tags for this theme.
