@@ -50,13 +50,34 @@ function mpk_setup() {
 	register_nav_menus(
 		array(
 			'menu-primary' => esc_html__( 'Primary', 'mpk' ),
+			'menu-about' => esc_html__( 'About', 'mpk' ),
+			'menu-store' => esc_html__( 'Store', 'mpk' ),
+			'menu-contact' => esc_html__( 'Contact', 'mpk' ),
 		)
 	);
 
 	/*
-		* Switch default core markup for search form, comment form, and comments
-		* to output valid HTML5.
-		*/
+	* Footer Widget 1
+	*/
+	function custom_footer_widget_one() {
+		$args = array(
+			'id' 			=>	'footer-widget-col-one',
+			'name'			=>	__('Footer Column One', 'text_domain'),
+			'description'	=>	__('Column One', 'text_domain'),
+			'before_title'	=>	'<h3 class="title">',
+			'after_title'	=>	'</h3>',
+			'before_widget'	=>	'<div id="%1$s" class="widget %2$s">',
+			'after_widget'	=>	'</div>'
+		);
+		register_sidebar( $args );
+	}
+	add_action( 'widgets_init', 'custom_footer_widget_one');
+
+
+	/*
+	* Switch default core markup for search form, comment form, and comments
+	* to output valid HTML5.
+	*/
 	add_theme_support(
 		'html5',
 		array(
