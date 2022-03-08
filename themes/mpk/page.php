@@ -13,7 +13,13 @@
  */
 /* */ 
 
-if(is_page(23)) { get_header('ourstory'); } else { get_header(); } wp_head();
+if ( is_page('our-story') ) :
+    get_header('ourstory');
+elseif ( is_page('special-page') ) :
+    get_header('special');    
+else :
+    get_header();
+endif;
 ?>
 	<main id="primary" class="site-main">
 
