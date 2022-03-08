@@ -104,18 +104,29 @@ function mpk_setup() {
 	add_theme_support( 'custom-header', $header_info );
 	
 	$header_images = array(
-		'sunset' => array(
+		'Home' => array(
 				'url'           => get_template_directory_uri() . '/assets/img/home-bg.png',
 				'thumbnail_url' => get_template_directory_uri() . '/assets/img/home-bg.png',
-				'description'   => 'Sunset',
+				'description'   => 'Home Page',
 		),
-		'flower' => array(
-				'url'           => get_template_directory_uri() . '/assets/img/home-bg.png',
-				'thumbnail_url' => get_template_directory_uri() . '/assets/img/home-bg.png',
-				'description'   => 'Flower',
+		'Story' => array(
+				'url'           => get_template_directory_uri() . '/assets/img/ourStory-bg.png',
+				'thumbnail_url' => get_template_directory_uri() . '/assets/img/ourStory-bg.png',
+				'description'   => 'Our Story',
 		),  
 	);
 	register_default_headers( $header_images );
+
+	// function change_header($url_for_image) {
+	// 	if (is_home()) 
+	// 		$url_for_image = "https://mountainpeak.local/wp-content/uploads/2022/03/cropped-home-bg.png";
+	
+	// 	if (is_single())
+	// 		$url_for_image = "https://mountainpeak.local/wp-content/uploads/2022/03/ourStory-bg.png";
+	
+	// 	return $url_for_image;
+	// }
+	// add_filter('mpk_mod_header_image', 'change_header');
 
 	/**
 	 * Add support for core custom logo.
