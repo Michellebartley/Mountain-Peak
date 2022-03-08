@@ -143,24 +143,6 @@ body{
     background-size: contain;
 }
 
-.site-footer {
-    display: flex;
-    background-color: #3E4246;
-    color: #fff;
-    justify-content: center;
-    align-items: center;
-    .site-info {
-        text-align: center;
-    }
-    .col-md-4 {
-        text-align: left;
-        padding-left: 2rem;
-        padding-top: 1rem;
-    }
-    .footer-navigation a {
-        color: #707070!important;
-    }
-}
 
 // .site-main {
 //     margin-top: 0;

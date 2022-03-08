@@ -12,27 +12,45 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info col-12 pb-3">
-			<div class="contianer p-2">
-				<div class="row container-xxxl">
-					<div class="col-md-4">
-						<nav id="site-navigation" class="main-navigation align-items-center">
-							<?php
-							wp_nav_menu(
-								array(
-									'theme_location' => 'menu-primary',
-									'menu_id'        => 'primary-menu',
-								)
-							);
-							?>
-						</nav><!-- #site-navigation -->
-					</div>
-				</div>		
+
+	<div class="text-white pt5 pb5">
+		<div class="container">
+			<div class="row d-inline-flex">
+				<div class="col-med-4">
+					<?php dynamic_sidebar( 'footer-widget-col-one' )?>
+				</div>
+				<div class="col-med-4">
+					Company
+				</div>
+				<div class="col-med-4 ms-auto">
+					Keep in Touch
+				</div>
 			</div>
-			<?php
-			printf( esc_html__( ' Copyright © 2022 Mountain Peaks All rights reserved'));
-			?>
-		</div><!-- .site-info -->	
+		</div>
+	</div>
+
+	<div class="container"></div>
+
+	<div class="container pt-2 pb-2">
+		<div class="row d-flex align-items-center">
+			<div class="col">
+				<p>&copy; <?php bloginfo('name');?> <?php echo date('Y'); ?> All rights reserved | Created by <a href="https://michellebartley.ca">Michelle Bartley</a> </p>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
