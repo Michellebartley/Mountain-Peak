@@ -55,10 +55,8 @@
 					<a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf ( _n( '%d item', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></a>
 				</div>
 
-				<div class="col account d-inline-flex justify-content-end align-items-right">	
-				<a href="https://mountainpeak.local/account/">
+				<div class="col account d-inline-flex justify-content-end align-items-right">
 					<i class="bi bi-person-circle"></i>
-				</a> 
 				</div>
 			</div>
 		</div>
@@ -72,11 +70,7 @@
 		<div class="row site-header__text">
 			<h1>Uncompromising… Quality Outdoor Equipment.</h1>
 			<h4>Outfitting Adventure Seekers Since 1985.</h4>
-			<button class="btn btn-md" role="button">	
-				<a href="https://mountainpeak.local/shop/">
-					SHOP NOW
-				</a> 
-			</button>
+			<button class="btn btn-md" href="#!" role="button">SHOP NOW</button>
 		</div>
 	</div>
 	<div class="text-center bg-image">		

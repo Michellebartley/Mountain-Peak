@@ -11,13 +11,46 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( ' Copyright © 2022 Mountain Peaks All rights reserved'));
-				?>
-		</div><!-- .site-info -->
+	<footer id="colophon" class="site-footer pt-5">
+
+	<div class="footer-row text-white pt5 pb5">
+		<div class="container">
+			<div class="row">
+				<div class="col-4">
+					<?php dynamic_sidebar( 'footer-widget-col-one' )?>
+				</div>
+				<div class="col-4">
+					<?php dynamic_sidebar( 'footer-widget-col-two' )?>
+				</div>
+				<div class="col-4 ms-auto">
+					<?php dynamic_sidebar( 'footer-widget-col-three' )?>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container"></div>
+
+	<div class="container pt-5 pb-3">
+		<div class="row d-flex align-items-center">
+			<div class="col-12">
+				<p>&copy; <?php bloginfo('name');?> <?php echo date('Y'); ?> All rights reserved | Created by <a href="https://michellebartley.ca"><span>Michelle Bartley</span></a> </p>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

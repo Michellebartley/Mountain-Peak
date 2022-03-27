@@ -50,13 +50,68 @@ function mpk_setup() {
 	register_nav_menus(
 		array(
 			'menu-primary' => esc_html__( 'Primary', 'mpk' ),
+			'menu-about' => esc_html__( 'About', 'mpk' ),
+			'menu-store' => esc_html__( 'Store', 'mpk' ),
+			'menu-contact' => esc_html__( 'Contact', 'mpk' ),
 		)
 	);
 
 	/*
-		* Switch default core markup for search form, comment form, and comments
-		* to output valid HTML5.
-		*/
+	* Footer Widget 1
+	*/
+	function custom_footer_widget_one() {
+		$args = array(
+			'id' 			=>	'footer-widget-col-one',
+			'name'			=>	__('Footer Column One', 'text_domain'),
+			'description'	=>	__('Column One', 'text_domain'),
+			'before_title'	=>	'<h3 class="title">',
+			'after_title'	=>	'</h3>',
+			'before_widget'	=>	'<div id="%1$s" class="widget %2$s">',
+			'after_widget'	=>	'</div>'
+		);
+		register_sidebar( $args );
+	}
+	add_action( 'widgets_init', 'custom_footer_widget_one');
+
+	/*
+	* Footer Widget 2
+	*/
+	function custom_footer_widget_two() {
+		$args = array(
+			'id' 			=>	'footer-widget-col-two',
+			'name'			=>	__('Footer Column Two', 'text_domain'),
+			'description'	=>	__('Column Two', 'text_domain'),
+			'before_title'	=>	'<h3 class="title">',
+			'after_title'	=>	'</h3>',
+			'before_widget'	=>	'<div id="%1$s" class="widget %2$s">',
+			'after_widget'	=>	'</div>'
+		);
+		register_sidebar( $args );
+	}
+	add_action( 'widgets_init', 'custom_footer_widget_two');
+
+	/*
+	* Footer Widget 3
+	*/
+	function custom_footer_widget_three() {
+		$args = array(
+			'id' 			=>	'footer-widget-col-three',
+			'name'			=>	__('Footer Column Three', 'text_domain'),
+			'description'	=>	__('Column Three', 'text_domain'),
+			'before_title'	=>	'<h3 class="title">',
+			'after_title'	=>	'</h3>',
+			'before_widget'	=>	'<div id="%1$s" class="widget %2$s">',
+			'after_widget'	=>	'</div>'
+		);
+		register_sidebar( $args );
+	}
+	add_action( 'widgets_init', 'custom_footer_widget_three');
+
+
+	/*
+	* Switch default core markup for search form, comment form, and comments
+	* to output valid HTML5.
+	*/
 	add_theme_support(
 		'html5',
 		array(
@@ -204,7 +259,7 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 	ob_start();
 
 	?>
-	<a class="cart-customlocation" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>"><?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?> – <?php echo $woocommerce->cart->get_cart_total(); ?></a>
+	<a class="cart-customlocation" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>"><?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?></a>
 	<?php
 	$fragments['a.cart-customlocation'] = ob_get_clean();
 	return $fragments;

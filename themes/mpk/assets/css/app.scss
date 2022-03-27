@@ -144,12 +144,25 @@ body{
 }
 
 .site-footer {
-    display: flex;
     background-color: #3E4246;
     color: #fff;
-
     .site-info {
         text-align: center;
+    }
+    .footer-row a {
+        color: #707070!important;
+    }
+    .col-12 {
+        text-align: center;
+    }
+    .col-12 span {
+        color: #E18130;
+    }
+    .wp-block-social-links {
+        height: 30px;
+    }
+    a.wp-block-social-link-anchor {
+        color: #E18130!important;
     }
 }
 
