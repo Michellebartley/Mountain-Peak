@@ -1,51 +1,35 @@
 <?php
-/**
- * The template for displaying archive pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package Mountain_Peak
- */
 
-get_header();
+if ( is_page('our-story') ) :
+    get_header('ourstory');
+elseif ( is_page('special-page') ) :
+    get_header('special');    
+else :
+    get_header();
+endif;
 ?>
 
-	<main id="primary" class="site-main">
+<section class="page-wrap">
+	<div class="container">
 
-		<?php if ( have_posts() ) : ?>
+		<h1><>php echo single_cat_title();?></h1>
 
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
-
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
+		<?php get_template_part( 'inc/section', 'archive' );?>
+		<?php 
+		
+		global $wp_query;
+		$big = 999999999; // need an unlikely integer
+		echo paginate_links( array(
+			'base'		=> str_replace($big, '%#%', esc_url( get_pagenum_link( $big))),
+			'format'	=> '?paged=%#%',
+			'current'	=> max( 1, get_query_var('page')),
+			'total'		=> $wp_query->max_num_pages
+		));
 		?>
 
-	</main><!-- #main -->
+	</div>
+</section>
 
 <?php
 get_sidebar();
-get_footer();
+get_footer();?>
