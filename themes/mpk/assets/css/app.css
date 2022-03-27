@@ -11377,7 +11377,11 @@ body {
 .site-header .site-header__text {
   margin-top: 5rem;
 }
-.site-header .site-header__text h1, .site-header .site-header__text .h1, .site-header .site-header__text h4, .site-header .site-header__text .h4, .site-header .site-header__text button, .site-header .site-header__text a {
+.site-header .site-header__text h1, .site-header .site-header__text .h1,
+.site-header .site-header__text h4,
+.site-header .site-header__text .h4,
+.site-header .site-header__text button,
+.site-header .site-header__text a {
   color: #fff !important;
   text-align: center;
   justify-content: center;
@@ -11451,11 +11455,17 @@ body {
   text-align: center;
 }
 
-#add_payment_method .wc-proceed-to-checkout a.checkout-button, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .woocommerce-checkout .wc-proceed-to-checkout a.checkout-button, .woocommerce #payment #place_order, .woocommerce-page #payment #place_order {
+#add_payment_method .wc-proceed-to-checkout a.checkout-button,
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
+.woocommerce-checkout .wc-proceed-to-checkout a.checkout-button,
+.woocommerce #payment #place_order,
+.woocommerce-page #payment #place_order {
   background-color: #E18130 !important;
 }
 
-#add_payment_method table.cart img, .woocommerce-cart table.cart img, .woocommerce-checkout table.cart img {
+#add_payment_method table.cart img,
+.woocommerce-cart table.cart img,
+.woocommerce-checkout table.cart img {
   width: 88px;
 }
 
@@ -11468,15 +11478,21 @@ body {
   height: 35px;
 }
 
-#add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment {
+#add_payment_method #payment,
+.woocommerce-cart #payment,
+.woocommerce-checkout #payment {
   background-color: #707070;
 }
 
-#add_payment_method #payment div.payment_box, .woocommerce-cart #payment div.payment_box, .woocommerce-checkout #payment div.payment_box {
+#add_payment_method #payment div.payment_box,
+.woocommerce-cart #payment div.payment_box,
+.woocommerce-checkout #payment div.payment_box {
   background-color: #fff;
 }
 
-#add_payment_method #payment div.payment_box::before, .woocommerce-cart #payment div.payment_box::before, .woocommerce-checkout #payment div.payment_box::before {
+#add_payment_method #payment div.payment_box::before,
+.woocommerce-cart #payment div.payment_box::before,
+.woocommerce-checkout #payment div.payment_box::before {
   display: none;
 }
 
