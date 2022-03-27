@@ -7,15 +7,16 @@
 
 .entry-title {
     display: none;
-    }
+}
 
-body{
+body {
     min-height: 100vh;
     background-color: hsl(0, 0%, 100%);
 }
 
 .img-container {
     margin-top: -37rem;
+
     img {
         z-index: -100;
 
@@ -24,65 +25,77 @@ body{
 
 .site-header {
     height: 100vh;
+
     .container-xxxl {
         width: 1500px;
     }
+
     ul.menu {
         padding: 0;
     }
-    .menu li{
+
+    .menu li {
         display: inline-flex;
         justify-content: space-between;
         align-items: flex-start;
         margin-right: 1rem;
     }
+
     .leftCol {
         display: flex;
         justify-content: left;
         align-items: center;
         margin-top: 2.6rem;
-        color: #fff!important;
+        color: #fff !important;
         font-size: 24px;
         font-weight: 600;
         z-index: 10;
     }
+
     .leftCol a {
-        color: #fff!important;
+        color: #fff !important;
     }
+
     .rightCol {
         display: flex;
-        justify-content:right;
+        justify-content: right;
         margin-top: 1rem;
         z-index: 10;
     }
+
     .aws-search-field {
         border-radius: 4px !important;
         z-index: -1;
     }
+
     .aws-search-btn {
-        margin-left: -3px!important;
+        margin-left: -3px !important;
         border-top-right-radius: 4px !important;
         border-bottom-right-radius: 4px !important;
-        background-color: #2b5440!important;
+        background-color: #2b5440 !important;
     }
+
     .aws-search-btn_icon {
-        color: #fff!important;
+        color: #fff !important;
     }
+
     .aws-container .aws-search-form {
         height: 28px;
         width: 15rem;
-        margin-right: 16px!important;
+        margin-right: 16px !important;
         z-index: 10;
     }
 
-    .bi{
+    .bi {
         padding: 2px;
         font-size: 25px;
-        color: #fff!important;
+        color: #fff !important;
     }
-    .bi-bag{
-        margin-right: -8px!important;
+
+    .bi-bag {
+        margin-right: -8px !important;
     }
+
     .cart-customlocation {
         font-size: 12px;
         font-weight: 500;
@@ -90,7 +103,7 @@ body{
         height: 17px;
         width: 16px;
         background-color: #2b5440;
-        color: #fff!important;
+        color: #fff !important;
         border-radius: 100%;
     }
 
@@ -103,23 +116,30 @@ body{
 
     .site-header__text {
         margin-top: 5rem;
-        h1, h4, button, a {
-            color: #fff!important;
+
+        h1,
+        h4,
+        button,
+        a {
+            color: #fff !important;
             text-align: center;
             justify-content: center;
             align-items: center;
             z-index: 10;
             margin-bottom: 30px;
         }
+
         h1 {
             font-size: 60px;
         }
-        .btn{
+
+        .btn {
             width: 10rem;
-            background-color: #2b5440!important;
+            background-color: #2b5440 !important;
             z-index: 10;
             color: #fff;
         }
+
         button {
             margin-inline: auto;
             border-radius: 20px;
@@ -131,9 +151,10 @@ body{
 
 .story-header {
     margin-top: -1rem;
-    .bi-arrow-down-circle-fill{
+
+    .bi-arrow-down-circle-fill {
         font-size: 50px;
-        color: #E18130!important;
+        color: #E18130 !important;
     }
 }
 
@@ -146,31 +167,38 @@ body{
 .site-footer {
     background-color: #3E4246;
     color: #fff;
+
     .site-info {
         text-align: center;
     }
+
     .footer-row a {
-        color: #707070!important;
+        color: #707070 !important;
     }
+
     .col-12 {
         text-align: center;
     }
+
     .col-12 span {
         color: #E18130;
     }
+
     .wp-block-social-links {
         height: 30px;
     }
+
     a.wp-block-social-link-anchor {
-        color: #E18130!important;
+        color: #E18130 !important;
     }
 }
 
 .page-wrap {
     min-height: 100vh;
 }
-.card-body .btn{
-    color: #fff!important;
+
+.card-body .btn {
+    color: #fff !important;
 }
 
 .woocommerce ul.products li.product .button {
@@ -178,16 +206,23 @@ body{
     width: 100%;
     text-align: center;
 }
-#add_payment_method .wc-proceed-to-checkout a.checkout-button, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .woocommerce-checkout .wc-proceed-to-checkout a.checkout-button, .woocommerce #payment #place_order, .woocommerce-page #payment #place_order  {
-    background-color: #E18130!important;
+
+#add_payment_method .wc-proceed-to-checkout a.checkout-button,
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
+.woocommerce-checkout .wc-proceed-to-checkout a.checkout-button,
+.woocommerce #payment #place_order,
+.woocommerce-page #payment #place_order {
+    background-color: #E18130 !important;
 }
 
-#add_payment_method table.cart img, .woocommerce-cart table.cart img, .woocommerce-checkout table.cart img {
+#add_payment_method table.cart img,
+.woocommerce-cart table.cart img,
+.woocommerce-checkout table.cart img {
     width: 88px;
 }
 
 .woocommerce div.product form.cart .button {
-    background-color: #E18130!important;
+    background-color: #E18130 !important;
     height: 35px;
 }
 
@@ -195,14 +230,21 @@ body{
     height: 35px;
 }
 
-#add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment  {
+#add_payment_method #payment,
+.woocommerce-cart #payment,
+.woocommerce-checkout #payment {
     background-color: #707070;
 }
 
-#add_payment_method #payment div.payment_box, .woocommerce-cart #payment div.payment_box, .woocommerce-checkout #payment div.payment_box{
+#add_payment_method #payment div.payment_box,
+.woocommerce-cart #payment div.payment_box,
+.woocommerce-checkout #payment div.payment_box {
     background-color: #fff;
 }
-#add_payment_method #payment div.payment_box::before, .woocommerce-cart #payment div.payment_box::before, .woocommerce-checkout #payment div.payment_box::before {
+
+#add_payment_method #payment div.payment_box::before,
+.woocommerce-cart #payment div.payment_box::before,
+.woocommerce-checkout #payment div.payment_box::before {
     display: none;
 }
 
