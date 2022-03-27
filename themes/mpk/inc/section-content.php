@@ -10,7 +10,7 @@ endif;
 ?>
 
 <section class="page-wrap">
-	<div class="coontainer">
+	<div class="container">
         
 		<?php get_template_part( 'inc/section', 'archive' );?>
 
