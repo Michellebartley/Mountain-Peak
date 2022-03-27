@@ -175,6 +175,13 @@ if ( ! class_exists( 'AWS_Search' ) ) :
 //                $this->data['search_terms'][] = '';
 //            }
 
+            /**
+             * Filter search data parameters
+             * @since 2.50
+             * @param array $this->data Array of data parameters
+             */
+            $this->data = apply_filters( 'aws_search_data_parameters', $this->data );
+
             if ( ! empty( $this->data['search_terms'] ) ) {
 
                 if ( ! empty( $this->data['search_in'] ) ) {

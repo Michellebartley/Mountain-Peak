@@ -6,10 +6,10 @@ use CreativeMail\CreativeMail;
 use CreativeMail\Helpers\EnvironmentHelper;
 use CreativeMail\Helpers\OptionsHelper;
 use CreativeMail\Helpers\SsoHelper;
+use CreativeMail\Models\Response;
 use CreativeMail\Modules\DashboardWidgetModule;
 use CreativeMail\Modules\FeedbackNoticeModule;
 use Exception;
-use stdClass;
 
 /**
  * The AdminManager will manage the admin section of the plugin.
@@ -92,7 +92,7 @@ class AdminManager
 
         if (!wp_verify_nonce($nonce,self::ADMIN_AJAX_NONCE))
         {
-            $response        = new stdClass();
+            $response        = new Response();
             $response->url   = admin_url('admin.php?page=creativemail');
             wp_send_json_success($response);
         }
@@ -144,7 +144,7 @@ class AdminManager
         $linkReference = array_key_exists('link_reference', $_POST) ? $_POST['link_reference'] : null;
         $linkParameters = array_key_exists('link_parameters', $_POST) ? $_POST['link_parameters'] : null;
 
-        $response        = new stdClass();
+        $response        = new Response();
         $response->url   = $this->request_single_sign_on_url_internal($linkReference, $linkParameters);
 
         wp_send_json_success($response);
