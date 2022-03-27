@@ -115,15 +115,15 @@ body{
             font-size: 60px;
         }
         .btn{
+            text-align: center;
+            justify-items: center;
             width: 10rem;
+            // height: 5rem;
             background-color: #2b5440!important;
-            z-index: 10;
-            color: #fff;
         }
         button {
             margin-inline: auto;
             border-radius: 20px;
-            text-align: center;
         }
     }
 
@@ -143,71 +143,7 @@ body{
     background-size: contain;
 }
 
-.site-footer {
-    background-color: #3E4246;
-    color: #fff;
-    .site-info {
-        text-align: center;
-    }
-    .footer-row a {
-        color: #707070!important;
-    }
-    .col-12 {
-        text-align: center;
-    }
-    .col-12 span {
-        color: #E18130;
-    }
-    .wp-block-social-links {
-        height: 30px;
-    }
-    a.wp-block-social-link-anchor {
-        color: #E18130!important;
-    }
-}
 
-.page-wrap {
-    min-height: 100vh;
-}
-.card-body .btn{
-    color: #fff!important;
-}
-
-.woocommerce ul.products li.product .button {
-    background-color: #E18130;
-    width: 100%;
-    text-align: center;
-}
-#add_payment_method .wc-proceed-to-checkout a.checkout-button, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .woocommerce-checkout .wc-proceed-to-checkout a.checkout-button, .woocommerce #payment #place_order, .woocommerce-page #payment #place_order  {
-    background-color: #E18130!important;
-}
-
-#add_payment_method table.cart img, .woocommerce-cart table.cart img, .woocommerce-checkout table.cart img {
-    width: 88px;
-}
-
-.woocommerce div.product form.cart .button {
-    background-color: #E18130!important;
-    height: 35px;
-}
-
-.woocommerce .quantity .qty {
-    height: 35px;
-}
-
-#add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment  {
-    background-color: #707070;
-}
-
-#add_payment_method #payment div.payment_box, .woocommerce-cart #payment div.payment_box, .woocommerce-checkout #payment div.payment_box{
-    background-color: #fff;
-}
-#add_payment_method #payment div.payment_box::before, .woocommerce-cart #payment div.payment_box::before, .woocommerce-checkout #payment div.payment_box::before {
-    display: none;
-}
-
-.woocommerce-MyAccount-content {
-    strong {
-        color: #E18130;
-    }
-}
+// .site-main {
+//     margin-top: 0;
+// }
