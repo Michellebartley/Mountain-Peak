@@ -259,7 +259,10 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 	ob_start();
 
 	?>
-	<a class="cart-customlocation" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>"><?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?></a>
+	<a href="<?php echo wc_get_cart_url(); ?>"<i class="bi bi-bag"></i></a>
+		<a href="<?php echo wc_get_cart_url(); ?>"> 
+			<p class="item_count"><?php echo WC() ->cart->get_cart_contents_count(); ?></p>
+		</a>
 	<?php
 	$fragments['a.cart-customlocation'] = ob_get_clean();
 	return $fragments;
@@ -284,5 +287,15 @@ require get_template_directory() . '/inc/customizer.php';
  * Block Editor additions.
  */
 require get_template_directory() . '/inc/block-editor.php';
+
+/**
+ * Woocommerce additions.
+ */
+// require get_template_directory() . '/inc/woocommerce.php';
+
+/**
+ * Custom post type additions.
+ */
+require get_template_directory() . '/inc/post-types.php';
 
 
