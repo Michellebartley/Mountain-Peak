@@ -51,8 +51,11 @@
 				</div>
 
 				<div class="col cart d-inline-flex justify-content-end align-items-right">
-					<a href="<?php echo wc_get_cart_url(); ?>"<i class="bi bi-bag"></i></a>
-					<a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf ( _n( '%d item', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></a>
+					<a href="<?php echo wc_get_cart_url(); ?>"<i class="bi bi-bag"></i>
+					</a>
+					<a href="<?php echo wc_get_cart_url(); ?>"> 
+						<p class="item_count"><?php echo WC() ->cart->get_cart_contents_count(); ?></p>
+					</a>
 				</div>
 
 				<div class="col account d-inline-flex justify-content-end align-items-right">	
