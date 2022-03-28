@@ -11358,12 +11358,12 @@ body {
 .site-header .bi-bag {
   margin-right: -8px !important;
 }
-.site-header .cart-customlocation {
-  font-size: 12px;
+.site-header .item_count {
+  font-size: 14px;
   font-weight: 500;
   text-align: center;
-  height: 17px;
-  width: 16px;
+  height: 20px;
+  width: 20px;
   background-color: #2b5440;
   color: #fff !important;
   border-radius: 100%;
@@ -11498,4 +11498,13 @@ body {
 
 .woocommerce-MyAccount-content strong {
   color: #E18130;
+}
+
+.form-label {
+  display: none;
+}
+
+.btn-primary {
+  background-color: #2b5440;
+  border-color: #2b5440;
 }/*# sourceMappingURL=app.css.map */

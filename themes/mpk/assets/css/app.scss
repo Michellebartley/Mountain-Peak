@@ -96,12 +96,12 @@ body {
         margin-right: -8px !important;
     }
 
-    .cart-customlocation {
-        font-size: 12px;
+    .item_count {
+        font-size: 14px;
         font-weight: 500;
         text-align: center;
-        height: 17px;
-        width: 16px;
+        height: 20px;
+        width: 20px;
         background-color: #2b5440;
         color: #fff !important;
         border-radius: 100%;
@@ -252,4 +252,13 @@ body {
     strong {
         color: #E18130;
     }
+}
+
+.form-label {
+    display: none;
+}
+
+.btn-primary {
+    background-color: #2b5440;
+    border-color: #2b5440;
 }
