@@ -1,16 +1,4 @@
 <?php
-/**
- * Template Name: Archive
- *
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package Mountain_Peak
- */
-/* */ 
 
 if ( is_page('our-story') ) :
     get_header('ourstory');
@@ -24,7 +12,7 @@ endif;
 <section class="page-wrap">
 	<div class="container">
 
-		<h1><php echo single_cat_title();?></h1>
+		<h1><>php echo single_cat_title();?></h1>
 
 		<?php get_template_part( 'inc/section', 'archive' );?>
 		<?php 
