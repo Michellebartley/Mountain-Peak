@@ -2,8 +2,8 @@
 
 if ( is_page('our-story') ) :
     get_header('ourstory');
-elseif ( is_page('special-page') ) :
-    get_header('special');    
+elseif ( is_page(124) ) :
+    get_header('shop');    
 else :
     get_header();
 endif;
