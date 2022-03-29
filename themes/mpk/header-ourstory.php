@@ -28,7 +28,7 @@
 	<header id="masthead" class="site-header story-header">
 	<div class="container pt-2 pb-2">
 
-		<div class="row container-xxxl">
+		<div class="row container-xxl">
 
 			<div class="col-md-4 leftCol">
 				<nav id="site-navigation" class="main-navigation align-items-center">
@@ -75,7 +75,7 @@
 		<div class="row site-header__text">
 			<h1>Outfitting Adventures Since 1985</h1>
 			<h4>Explore Our Legacy</h4>
-            <a href="#">
+            <a href="#story-title">
             <i class="bi bi-arrow-down-circle-fill"></i>
             </a> 
 		</div>
