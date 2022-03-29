@@ -168,7 +168,12 @@ function mpk_setup() {
 				'url'           => get_template_directory_uri() . '/assets/img/ourStory-bg.png',
 				'thumbnail_url' => get_template_directory_uri() . '/assets/img/ourStory-bg.png',
 				'description'   => 'Our Story',
-		),  
+		),
+		'Shop' => array(
+				'url'           => get_template_directory_uri() . '/assets/img/header-bg.png',
+				'thumbnail_url' => get_template_directory_uri() . '/assets/img/header-bg.png',
+				'description'   => 'Shop',
+		),   
 	);
 	register_default_headers( $header_images );
 
@@ -291,7 +296,7 @@ require get_template_directory() . '/inc/block-editor.php';
 /**
  * Woocommerce additions.
  */
-// require get_template_directory() . '/inc/woocommerce.php';
+require get_template_directory() . '/inc/woocommerce.php';
 
 /**
  * Custom post type additions.
