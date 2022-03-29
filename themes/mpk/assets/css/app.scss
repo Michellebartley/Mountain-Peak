@@ -25,9 +25,10 @@ body {
 
 .site-header {
     height: 100vh;
+    width: 100vw;
 
     .container-xxxl {
-        width: 1500px;
+        width: 100%;
     }
 
     ul.menu {
@@ -47,7 +48,7 @@ body {
         align-items: center;
         margin-top: 2.6rem;
         color: #fff !important;
-        font-size: 24px;
+        font-size: 2rem;
         font-weight: 600;
         z-index: 10;
     }
@@ -64,14 +65,14 @@ body {
     }
 
     .aws-search-field {
-        border-radius: 4px !important;
+        border-radius: .2rem !important;
         z-index: -1;
     }
 
     .aws-search-btn {
-        margin-left: -3px !important;
-        border-top-right-radius: 4px !important;
-        border-bottom-right-radius: 4px !important;
+        margin-left: -.1rem !important;
+        border-top-right-radius: .15rem !important;
+        border-bottom-right-radius: .15rem !important;
         background-color: #2b5440 !important;
     }
 
@@ -80,28 +81,28 @@ body {
     }
 
     .aws-container .aws-search-form {
-        height: 28px;
+        height: 2rem;
         width: 15rem;
-        margin-right: 16px !important;
+        margin-right: 1.5rem !important;
         z-index: 10;
     }
 
     .bi {
-        padding: 2px;
-        font-size: 25px;
+        padding: .2rem;
+        font-size: 1.7rem;
         color: #fff !important;
     }
 
     .bi-bag {
-        margin-right: -8px !important;
+        margin-right: -.5rem !important;
     }
 
     .item_count {
-        font-size: 14px;
+        font-size: .9rem;
         font-weight: 500;
         text-align: center;
-        height: 20px;
-        width: 20px;
+        height: 1.4rem;
+        width: 1.4rem;
         background-color: #2b5440;
         color: #fff !important;
         border-radius: 100%;
@@ -112,6 +113,13 @@ body {
         justify-content: center;
         padding: 1rem;
         z-index: 10;
+    }
+
+    header.container {
+        width: 100%;
+        height: auto;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .site-header__text {
@@ -126,11 +134,11 @@ body {
             justify-content: center;
             align-items: center;
             z-index: 10;
-            margin-bottom: 30px;
+            margin-bottom: 2rem;
         }
 
         h1 {
-            font-size: 60px;
+            font-size: 3rem;
         }
 
         .btn {
@@ -142,7 +150,7 @@ body {
 
         button {
             margin-inline: auto;
-            border-radius: 20px;
+            border-radius: 1.5rem;
             text-align: center;
         }
     }
@@ -153,7 +161,7 @@ body {
     margin-top: -1rem;
 
     .bi-arrow-down-circle-fill {
-        font-size: 50px;
+        font-size: 3rem;
         color: #E18130 !important;
     }
 }
@@ -161,7 +169,15 @@ body {
 .page-id-92 .story-header {
     background-image: url(https://mountainpeak.local/wp-content/uploads/2022/03/ourStory-bg.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    margin-bottom: 12rem;
+}
+
+.page-id-124 .shop-header {
+    background-image: url(https://mountainpeak.local/wp-content/uploads/2022/03/header-bg.png);
+    background-repeat: no-repeat;
+    // background-size: cover;
+    margin-bottom: -22rem;
 }
 
 .site-footer {
@@ -185,12 +201,17 @@ body {
     }
 
     .wp-block-social-links {
-        height: 30px;
+        height: 2rem;
     }
 
     a.wp-block-social-link-anchor {
         color: #E18130 !important;
     }
+}
+
+.wp-block-social-links .wp-block-social-link .wp-block-social-link-anchor svg {
+    color: #E18130 !important;
+    display: inline;
 }
 
 .page-wrap {
@@ -218,16 +239,16 @@ body {
 #add_payment_method table.cart img,
 .woocommerce-cart table.cart img,
 .woocommerce-checkout table.cart img {
-    width: 88px;
+    width: 5.5rem;
 }
 
 .woocommerce div.product form.cart .button {
     background-color: #E18130 !important;
-    height: 35px;
+    height: 2.1rem;
 }
 
 .woocommerce .quantity .qty {
-    height: 35px;
+    height: 2.1rem;
 }
 
 #add_payment_method #payment,
@@ -254,11 +275,52 @@ body {
     }
 }
 
+.woocommerce-result-count {
+    display: none;
+}
+
 .form-label {
     display: none;
+}
+
+.entry-content {
+    margin-top: -10rem;
+    margin-bottom: 5rem;
+}
+
+.entry-content>* {
+    width: 80vw !important;
 }
 
 .btn-primary {
     background-color: #2b5440;
     border-color: #2b5440;
+}
+
+button#wsf-1-field-14 {
+    margin-left: -4rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link {
+    background-color: #E18130;
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+}
+
+.wc-block-grid__product .wc-block-grid__product-price {
+    font-size: .8rem;
+    color: #707070;
+    font-weight: 400;
+}
+
+.wc-block-grid__product .wc-block-grid__product-title {
+    font-size: 1rem;
+    color: #2b5440;
 }
