@@ -11,18 +11,18 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer pt-5">
+	<footer id="colophon" class="site-footer pt-5 pl-5 pr-5">
 
 	<div class="footer-row text-white pt5 pb5">
-		<div class="container">
+		<div class="container col-12">
 			<div class="row">
-				<div class="col-4">
+				<div class="col-6">
 					<?php dynamic_sidebar( 'footer-widget-col-one' )?>
 				</div>
-				<div class="col-4">
+				<div class="col-6">
 					<?php dynamic_sidebar( 'footer-widget-col-two' )?>
 				</div>
-				<div class="col-4 ms-auto">
+				<div class="col-6 ms-auto">
 					<?php dynamic_sidebar( 'footer-widget-col-three' )?>
 				</div>
 			</div>
