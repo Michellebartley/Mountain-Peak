@@ -26,7 +26,7 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'mpk' ); ?></a>
 
 	<header id="masthead" class="site-header">
-	<div class="container pt-2 pb-2">
+	<div class="container pt-2 pb-2 main-header-container">
 
 		<div class="row container-xxxl">
 
