@@ -28,7 +28,7 @@
 	<header id="masthead" class="site-header story-header">
 	<div class="container pt-2 pb-2">
 
-		<div class="row container-xxxl">
+		<div class="row container-xxl">
 
 			<div class="col-md-4 leftCol">
 				<nav id="site-navigation" class="main-navigation align-items-center">
@@ -51,8 +51,11 @@
 				</div>
 
 				<div class="col cart d-inline-flex justify-content-end align-items-right">
-					<a href="<?php echo wc_get_cart_url(); ?>"<i class="bi bi-bag"></i></a>
-					<a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf ( _n( '%d item', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></a>
+					<a href="<?php echo wc_get_cart_url(); ?>"<i class="bi bi-bag"></i>
+					</a>
+					<a href="<?php echo wc_get_cart_url(); ?>"> 
+						<p class="item_count"><?php echo WC() ->cart->get_cart_contents_count(); ?></p>
+					</a>
 				</div>
 
 				<div class="col account d-inline-flex justify-content-end align-items-right">	
@@ -72,7 +75,7 @@
 		<div class="row site-header__text">
 			<h1>Outfitting Adventures Since 1985</h1>
 			<h4>Explore Our Legacy</h4>
-            <a href="#">
+            <a href="#story-title">
             <i class="bi bi-arrow-down-circle-fill"></i>
             </a> 
 		</div>
