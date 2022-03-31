@@ -2,7 +2,6 @@
 // Option A: Include all of Bootstrap
 
 @import "./vendor/scss/bootstrap";
-
 // Add custome code after this
 
 .entry-title {
@@ -181,6 +180,7 @@ body {
 }
 
 .site-footer {
+
     background-color: #3E4246;
     color: #fff;
 
@@ -192,9 +192,9 @@ body {
         color: #707070 !important;
     }
 
-    .col-12 {
-        text-align: center;
-    }
+    // .col-12 {
+    //     text-align: center;
+    // }
 
     .col-12 span {
         color: #E18130;
@@ -207,11 +207,103 @@ body {
     a.wp-block-social-link-anchor {
         color: #E18130 !important;
     }
-}
 
-.wp-block-social-links .wp-block-social-link .wp-block-social-link-anchor svg {
-    color: #E18130 !important;
-    display: inline;
+    .wp-block-social-links .wp-block-social-link .wp-block-social-link-anchor svg {
+        color: #E18130 !important;
+        display: inline;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+
+    button#wsf-1-field-14 {
+        margin-left: -4rem;
+        width: 100%;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    @media (max-width: 767px) {
+        .col-12 {
+            text-align: left !important;
+        }
+
+        .wp-block-spacer {
+            display: none;
+        }
+
+        .col-4 {
+            width: 100%;
+        }
+
+        #wsf-1-field-wrapper-12,
+        #wsf-1-field-wrapper-14 {
+            width: 100%;
+        }
+
+        button#wsf-1-field-14 {
+            margin-left: 0;
+            border-top-left-radius: .2rem;
+            border-bottom-left-radius: .2rem;
+        }
+
+        // .wp-block-social-links {
+        //     justify-content: center;
+        // }
+
+        .copyright {
+            text-align: center;
+        }
+
+    }
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .col-12 {
+            text-align: left !important;
+        }
+
+        .wp-block-spacer {
+            display: none;
+        }
+
+        .col-4 {
+            width: 50%;
+        }
+
+        .newsletter-signup {
+            width: 100%;
+            margin-top: 1.5rem;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #wsf-1-field-wrapper-12,
+        #wsf-1-field-wrapper-14 {
+            width: auto;
+        }
+
+        input {
+            margin-left: 2rem;
+        }
+
+        #wsf-1-fields-2 {
+            justify-content: center;
+        }
+
+        button#wsf-1-field-14 {
+            margin-left: 0;
+        }
+
+        .wp-block-social-links {
+            justify-content: center;
+            margin-top: .5rem;
+        }
+
+        .copyright {
+            text-align: center !important;
+        }
+    }
 }
 
 .page-wrap {
@@ -297,12 +389,6 @@ body {
     border-color: #2b5440;
 }
 
-button#wsf-1-field-14 {
-    margin-left: -4rem;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
 .wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link {
     background-color: #E18130;
     width: 100%;
@@ -323,4 +409,18 @@ button#wsf-1-field-14 {
 .wc-block-grid__product .wc-block-grid__product-title {
     font-size: 1rem;
     color: #2b5440;
+}
+
+.woocommerce-loop-category__title {
+    background-color: #E18130;
+    text-align: center;
+}
+
+mark.count {
+    display: none;
+    background-color: transparent;
+}
+
+a.wc-block-grid__product-image {
+    width: 100%;
 }
