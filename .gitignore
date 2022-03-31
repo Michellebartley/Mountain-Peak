@@ -16,6 +16,7 @@ uploads
 upgrade
 
 # WordPress plugin folders
+plugins
 plugin/current-template-file
 
 # NPM files/folders

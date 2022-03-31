@@ -26,7 +26,7 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'mpk' ); ?></a>
 
 	<header id="masthead" class="site-header">
-	<div class="container pt-2 pb-2">
+	<div class="container pt-2 pb-2 main-header-container">
 
 		<div class="row container-xxxl">
 
@@ -51,12 +51,17 @@
 				</div>
 
 				<div class="col cart d-inline-flex justify-content-end align-items-right">
-					<a href="<?php echo wc_get_cart_url(); ?>"<i class="bi bi-bag"></i></a>
-					<a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf ( _n( '%d item', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></a>
+					<a href="<?php echo wc_get_cart_url(); ?>"<i class="bi bi-bag"></i>
+					</a>
+					<a href="<?php echo wc_get_cart_url(); ?>"> 
+						<p class="item_count"><?php echo WC() ->cart->get_cart_contents_count(); ?></p>
+					</a>
 				</div>
 
 				<div class="col account d-inline-flex justify-content-end align-items-right">
-					<i class="bi bi-person-circle"></i>
+					<a href="https://mountainpeak.local/account/">
+						<i class="bi bi-person-circle"></i>
+					</a> 
 				</div>
 			</div>
 		</div>
@@ -70,7 +75,11 @@
 		<div class="row site-header__text">
 			<h1>Uncompromising… Quality Outdoor Equipment.</h1>
 			<h4>Outfitting Adventure Seekers Since 1985.</h4>
-			<button class="btn btn-md" href="#!" role="button">SHOP NOW</button>
+			<button class="btn btn-md" role="button">	
+				<a href="https://mountainpeak.local/shop/">
+					SHOP NOW
+				</a> 
+			</button>
 		</div>
 	</div>
 	<div class="text-center bg-image">		
